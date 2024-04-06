@@ -1,0 +1,10 @@
+type FitnessModel @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  date: Int
+  dateISO: String
+  user: String
+  label: String
+  month: String
+  weekday: String
+  year: Int
+}

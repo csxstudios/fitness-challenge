@@ -1,0 +1,21 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-fitnesschallenge-dev-171324-authRole",
+      "UnauthRoleArn": "arn:aws:iam::899026101945:role/amplify-fitnesschallenge-dev-171324-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::899026101945:role/amplify-fitnesschallenge-dev-171324-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-fitnesschallenge-dev-171324-deployment",
+      "UnauthRoleName": "amplify-fitnesschallenge-dev-171324-unauthRole",
+      "StackName": "amplify-fitnesschallenge-dev-171324",
+      "StackId": "arn:aws:cloudformation:us-east-1:899026101945:stack/amplify-fitnesschallenge-dev-171324/6bb45b40-f45a-11ee-96c1-0e24ab67d8db",
+      "AmplifyAppId": "d14f9t0omdb8xh"
+    },
+    "categories": {
+      "auth": {
+        "fitnesschallenge9e8a71e0": {},
+        "fitnesschallenge": {}
+      }
+    }
+  }
+}

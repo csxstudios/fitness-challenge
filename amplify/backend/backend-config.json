@@ -1,0 +1,124 @@
+{
+  "api": {
+    "fitnesschallenge": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "fitnesschallenge": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_fitnesschallenge_allowUnauthenticatedIdentities": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "fitnesschallenge"
+        }
+      ]
+    },
+    "AMPLIFY_auth_fitnesschallenge_authRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "fitnesschallenge"
+        }
+      ]
+    },
+    "AMPLIFY_auth_fitnesschallenge_authRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "fitnesschallenge"
+        }
+      ]
+    },
+    "AMPLIFY_auth_fitnesschallenge_identityPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "fitnesschallenge"
+        }
+      ]
+    },
+    "AMPLIFY_auth_fitnesschallenge_identityPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "fitnesschallenge"
+        }
+      ]
+    },
+    "AMPLIFY_auth_fitnesschallenge_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "fitnesschallenge"
+        }
+      ]
+    },
+    "AMPLIFY_auth_fitnesschallenge_unauthRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "fitnesschallenge"
+        }
+      ]
+    },
+    "AMPLIFY_auth_fitnesschallenge_unauthRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "fitnesschallenge"
+        }
+      ]
+    },
+    "AMPLIFY_auth_fitnesschallenge_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "fitnesschallenge"
+        }
+      ]
+    },
+    "AMPLIFY_auth_fitnesschallenge_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "fitnesschallenge"
+        }
+      ]
+    },
+    "AMPLIFY_auth_fitnesschallenge_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "fitnesschallenge"
+        }
+      ]
+    }
+  }
+}
