@@ -1,4 +1,5 @@
-import { API } from 'aws-amplify';
+import { generateClient } from 'aws-amplify/api';
+const client = generateClient();
 
 export const prevMeterBill = [
     {
@@ -64,7 +65,7 @@ export const getLastMeterValue = async () => {
     };
 
     console.log("getLastMeterValue");
-    const apiData = await API.get('meterApi', '/meter', myInit);
+    const apiData = await client.get('meterApi', '/meter', myInit);
 
     return apiData;
 }
@@ -77,7 +78,7 @@ export const getLastMeterOnDate = async (dateEpoch) => {
     };
 
     console.log("getLastMeterOnDate");
-    const apiData = await API.get('meterApi', '/meter', myInit);
+    const apiData = await client.get('meterApi', '/meter', myInit);
 
     return apiData;
 }

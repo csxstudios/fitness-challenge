@@ -14,7 +14,19 @@
     "categories": {
       "auth": {
         "fitnesschallenge9e8a71e0": {},
-        "fitnesschallenge": {}
+        "fitnesschallenge": {
+          "userPoolId": "us-east-1_nhq3btIDb",
+          "userPoolName": "amplifyreactapp6c55e32f_userpool_6c55e32f-dev",
+          "webClientId": "3eggnru87855c7gu5aobum695s",
+          "nativeClientId": "3eggnru87855c7gu5aobum695s",
+          "identityPoolId": "us-east-1:0165b87f-cfc5-4ac9-9b61-143240c33ca7",
+          "identityPoolName": "amplifyreactapp6c55e32f_identitypool_6c55e32f__dev",
+          "allowUnauthenticatedIdentities": false,
+          "authRoleArn": "arn:aws:iam::899026101945:role/amplify-amplifyreactapp-dev-91141-authRole",
+          "authRoleName": "amplify-amplifyreactapp-dev-91141-authRole",
+          "unauthRoleArn": "arn:aws:iam::899026101945:role/amplify-amplifyreactapp-dev-91141-unauthRole",
+          "unauthRoleName": "amplify-amplifyreactapp-dev-91141-unauthRole"
+        }
       }
     }
   }

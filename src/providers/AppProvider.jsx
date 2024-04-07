@@ -1,6 +1,6 @@
 import { React, createContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Navbar, Home } from '../components';
+import { Navbar, Home, FitnessList } from '../components';
 import { parseDateISOString } from '../utils/dateFunctions';
 
 import { withAuthenticator } from '@aws-amplify/ui-react';
@@ -24,6 +24,7 @@ const AppProvider = ({ signOut, user }) => {
             <Navbar />
             <Routes>
                 <Route path="/*" element={<Home />} />
+                <Route path="/List" element={<FitnessList />} />
             </Routes>
         </AppContext.Provider>
     );

@@ -10,8 +10,14 @@ const Navbar = () => {
                 <span className="text-white">Amplify React Demo</span>
             </Nav.Item>
             <Nav className="navbar-nav ms-md-auto text-white" as="ul">
+                <Nav.Item>
+                    <Nav.Link href="/">Dashboard</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link href="/List">List</Nav.Link>
+                </Nav.Item>
                 <Dropdown as={NavItem}>
-                    <Dropdown.Toggle as={NavLink}>Hello {appContext.user.username}</Dropdown.Toggle>
+                    <Dropdown.Toggle as={NavLink}>{appContext.user.username}</Dropdown.Toggle>
                     <Dropdown.Menu>
                         <Dropdown.Item>
                             <button className="btn btn-link" onClick={appContext.signOut}>Sign out</button>
