@@ -12,6 +12,17 @@ sudo n stable
 ### Restart WSL Ubuntu
 ```sh
 exit
+powershell: wsl --shutdown
+```
+
+### Create a GitHub repo and clone
+Simply name the react app the same name as your repo:
+```sh
+git clone https://github.com/<username>/<repo_name>.git
+
+//Use or reset your git token
+git config remote.origin.url https://<username>:<token>@github.com/<username>/<repo_name>.git
+
 ```
 
 ### Create React App
