@@ -16,7 +16,6 @@ powershell: wsl --shutdown
 ```
 
 ### Create a GitHub repo and clone
-Simply name the react app the same name as your repo:
 ```sh
 git clone https://github.com/<username>/<repo_name>.git
 
@@ -26,7 +25,6 @@ git config remote.origin.url https://<username>:<token>@github.com/<username>/<r
 ```
 
 ### Create React App
-Simply name the react app the same name as your repo:
 ```sh
 npx create-react-app my-app
 cd my-app
@@ -34,7 +32,6 @@ npm start
 ```
 
 ### Common Amplify CLI Commands
-Simply name the react app the same name as your repo:
 ```sh
 amplify init
 amplify add auth

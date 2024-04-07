@@ -1,10 +1,13 @@
-type FitnessModel @model @auth(rules: [{allow: public}]) {
+type FitnessModel @model @searchable @auth(rules: [{allow: public}]) {
   id: ID!
   date: Int
   dateISO: String
-  user: String
-  label: String
+  user: String!
+  label: String!
   month: String
   weekday: String
+  temp: Float
   year: Int
+  count: Int!
+  exercise: String!
 }

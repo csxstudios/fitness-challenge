@@ -22,7 +22,8 @@ const FitnessCreateForm = () => {
         weekday: appContext.session.weekday,
         year: appContext.session.year,
         user: appContext.user.username,
-        label: 'pushups',
+        exercise: 'pushups',
+        label: 'Solo Leveling Fitness Challenge',
         temp: 0
     };
 
@@ -42,16 +43,18 @@ const FitnessCreateForm = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        console.log(data);
-        const data = {
-            body: formState
-        }
+        console.log(formState);
 
-        // if (data.body.meter > 0) {
-        //     const apiData = await API.post('meterApi', '/meter', data);
-        //     alert("Meter reading added.")
-        //     window.location.reload(false);
-        // }
+        if (formState.count > 0) {
+            const apiData = await client.graphql({
+                query: createFitnessModel,
+                variables: { input: formState },
+            })
+            alert("Fitness entry added.")
+            window.location.reload(false);
+        } else {
+            alert("Reps or miles must be greater than 0.")
+        }
     }
 
     const onChange = (e) => {
@@ -92,21 +95,21 @@ const FitnessCreateForm = () => {
         <>
             <h5>It's currently {formatTime(Date.now())} and {currTemp} °F.</h5>
             <Form onSubmit={onSubmit}>
-                <Form.Group className="mb-3" controlId="formMeterReading">
+                <Form.Group className="mb-3" controlId="formCount">
                     <Form.Label>Reps/Miles</Form.Label>
-                    <Form.Control type="number" name="meter" placeholder="Enter rep count or miles" onChange={onChange}></Form.Control>
+                    <Form.Control type="number" name="count" placeholder="Enter rep count or miles" onChange={onChange}></Form.Control>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formMeterDate">
+                <Form.Group className="mb-3" controlId="formDate">
                     <Form.Label>Date &amp; Time</Form.Label>
                     <Form.Control type="datetime-local" name="dateISO" placeholder="Date Time" onChange={onChangeDate} defaultValue={formState.dateISO}></Form.Control>
                 </Form.Group>
-                <Form.Group className="mb-3 d-none" controlId="formMeterTemp">
+                <Form.Group className="mb-3 d-none" controlId="formTemp">
                     <Form.Label>Farenheit</Form.Label>
                     <Form.Control type="number" name="temp" placeholder="Temp (F)" onChange={onChange} defaultValue={currTemp && currTemp}></Form.Control>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formMeterLabel">
+                <Form.Group className="mb-3" controlId="formExercise">
                     <Form.Label>Exercise</Form.Label>
-                    <Form.Select onChange={onChange} name="label" defaultValue="pushups">
+                    <Form.Select onChange={onChange} name="exercise" defaultValue="pushups">
                         <option>Select a location</option>
                         <option>pushups</option>
                         <option>dips</option>

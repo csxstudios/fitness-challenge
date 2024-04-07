@@ -27,6 +27,9 @@
           "unauthRoleArn": "arn:aws:iam::899026101945:role/amplify-amplifyreactapp-dev-91141-unauthRole",
           "unauthRoleName": "amplify-amplifyreactapp-dev-91141-unauthRole"
         }
+      },
+      "api": {
+        "fitnesschallenge": {}
       }
     }
   }

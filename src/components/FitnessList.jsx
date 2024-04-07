@@ -5,6 +5,7 @@ import { deleteFitnessModel } from '../graphql/mutations'
 import { listFitnessModels } from '../graphql/queries'
 import { Button, Text, Flex, Heading } from "@aws-amplify/ui-react";
 import { useCallback, useEffect, useState } from 'react';
+import { formatTime } from '../utils/format';
 
 const FitnessList = () => {
     const client = generateClient();
@@ -46,7 +47,11 @@ const FitnessList = () => {
                 <Heading level={1}>My notes</Heading>
             </Flex>
             {notes.map(note => <Flex alignItems={'center'}>
-                <Text>{note.id}</Text>
+                <Text>{note.weekday}</Text>
+                <Text>{formatTime(note.dateISO)}</Text>
+                <Text>{note.user}</Text>
+                <Text>{note.exercise}</Text>
+                <Text>{note.count}</Text>
                 <Button onClick={() => handleDeleteFitnessModel(note.id)}>Remove</Button>
             </Flex>)}
             <Button>Add Note</Button>

@@ -14,7 +14,10 @@ export const createFitnessModel = /* GraphQL */ `
       label
       month
       weekday
+      temp
       year
+      count
+      exercise
       createdAt
       updatedAt
       __typename
@@ -34,7 +37,10 @@ export const updateFitnessModel = /* GraphQL */ `
       label
       month
       weekday
+      temp
       year
+      count
+      exercise
       createdAt
       updatedAt
       __typename
@@ -54,7 +60,10 @@ export const deleteFitnessModel = /* GraphQL */ `
       label
       month
       weekday
+      temp
       year
+      count
+      exercise
       createdAt
       updatedAt
       __typename
